@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muy Yo</title>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: normal;
+        }
+
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left {
+            display: flex;
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+        }
+
+        .navbar-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-right: 12px;
+        }
+
+        .navbar-shopping-cart {
+            position: relative;
+        }
+
+        .navbar-shopping-cart div {
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*----------------------Listado de productos-----------------------------*/
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+
+            /* row-gap: 26px and colum-gap:26px */
+            gap: 26px;
+            place-content: center;
+
+            margin-top: 10px;
+        }
+
+        .container_item {
+            width: 240px;
+        }
+
+        .container_item img {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px;
+
+            object-fit: cover;
+        }
+
+        .item_flex {
+            display: flex;
+
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .container_item_carrito {
+            width: 30px;
+            height: 30px;
+        }
+
+        .container_item_carrito img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                grid-template-columns: 190px 190px;
+
+                /* row-gap: 10px and colum-gap:10px */
+                gap: 10px;
+            }
+
+            .container_item {
+                width: 190px;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .navbar-left ul {
+                display: none;
+            }
+
+            .navbar-email {
+                display: none;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <nav>
+        <img src="./pictures/icon_menu.svg" alt="menu" class="menu">
+
+        <div class="navbar-left">
+            <img src="./pictures/logo_icon.svg" alt="logo" class="logo">
+
+            <ul>
+                <li>
+                    <a href="/">Productos</a>
+                </li>
+                <li>
+                    <a href="/">Contacto</a>
+                </li>
+                <li>
+                    <a href="/">Categorias</a>
+                </li>
+                <li>
+                    <a href="/">Sobre nosotros</a>
+                </li>
+                <li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">user_email@example.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./pictures/icon_shopping_cart_notification.svg" alt="shopping cart">
+                    <div>10</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="container_item">
+            <img src="./pictures/productos/camila_perfumeria.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_item">
+            <img src="./pictures/productos/camila.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_item">
+            <img src="./pictures/productos/cherry.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_item">
+            <img src="./pictures/productos/masiana.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
