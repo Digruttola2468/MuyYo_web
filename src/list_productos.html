@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Productos</title>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: normal;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+
+            /* row-gap: 26px and colum-gap:26px */
+            gap: 26px;
+            place-content: center;
+        }
+
+        .container_item {
+            width: 240px;
+        }
+
+        .container_item img {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px;
+
+            object-fit: cover;
+        }
+
+        .item_flex {
+            display: flex;
+
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .container_item_carrito {
+            width: 30px;
+            height: 30px;
+        }
+
+        .container_item_carrito img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 412px) {
+            .container {
+                grid-template-columns: 190px 190px;
+
+                /* row-gap: 10px and colum-gap:10px */
+                gap: 10px;
+            }
+
+            .container_item {
+                width: 190px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container_item">
+            <img src="./pictures/productos/camila_perfumeria.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_item">
+            <img src="./pictures/productos/camila.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_item">
+            <img src="./pictures/productos/cherry.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_item">
+            <img src="./pictures/productos/masiana.png" alt="producto">
+            <div class="item_flex">
+                <div>
+                    <b>$120ARG</b>
+                    <p>Bolsas Personalizadas</p>
+                </div>
+                <div>
+                    <div class="container_item_carrito">
+                        <img src="./pictures/carro_icon.png" alt="CarritoIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
